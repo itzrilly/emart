@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 
 function Products() {
@@ -66,7 +67,7 @@ function Products() {
                                         <p className="card-text lead fw-bold">
                                             ${product.price}
                                         </p>
-                                        <a href="#" class="btn btn-outline-dark">Buy Now</a>
+                                        <NavLink to={`/products/${product.id}`} class="btn btn-outline-dark">Buy Now</NavLink>
                                     </div>
                                 </div>
                             </div>
